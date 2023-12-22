@@ -1,0 +1,53 @@
+GET http://localhost:8000/mascotas/buscar HTTP/1.1
+
+###
+GET http://localhost:8000/mascotas/buscar/3 HTTP/1.1
+
+###
+POST http://localhost:8000/mascotas/crear HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre":"Toby",
+    "edad": 2
+}
+
+###
+PUT http://localhost:8000/mascotas/actualizar/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "edad": 1
+}
+
+###
+DELETE http://localhost:8000/mascotas/eliminar/1 HTTP/1.1
+
+###
+GET http://localhost:8000/adopcion/buscar HTTP/1.1
+
+###
+GET http://localhost:8000/adopcion/buscar HTTP/1.1
+
+###
+GET http://localhost:8000/adopcion/buscar/1 HTTP/1.1
+
+###
+POST http://localhost:8000/adopcion/crear HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_mascota":2,
+    "id_estado_adopcion": 1
+}
+
+###
+PUT http://localhost:8000/adopcion/actualizar/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_mascota": 3
+}
+
+###
+DELETE http://localhost:8000/adopcion/eliminar/1 HTTP/1.1
