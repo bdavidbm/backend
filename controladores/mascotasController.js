@@ -45,10 +45,12 @@ const crear = (req,res)=>{
 
     mascotas.create(dataset).then((resultado)=>{
         res.status(200).json({
+            tipo:"success",
             mensaje: "registrado"
         })
     }).catch((err)=>{
         res.status(500).json({
+            tipo: "error",
             mensaje: `error: ${err}`
         })
     })

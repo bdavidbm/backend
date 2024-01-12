@@ -2,11 +2,13 @@ import express from "express";
 import { routerMascotas } from "../rutas/mascotasRouter.js";
 import { routerAdopcion } from "../rutas/adopcionRouter.js";
 import { db } from "../database/conexion.js";
+import cors from "cors"
 
 //creamos instancia de Express
 const app = express();
 
 //Middleware
+app.use(cors());
 app.use(express.json());
 
 //Verificar conexxion a bs
